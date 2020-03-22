@@ -21,10 +21,10 @@ public class Main {
         me.pet.feed();
         me.pet.feed();
 
-          me.pet.takeForAWalk();
+//          me.pet.takeForAWalk();
 //        me.pet.takeForAWalk();
-          me.pet.takeForAWalk();
-          me.pet.takeForAWalk();
+//          me.pet.takeForAWalk();
+//          me.pet.takeForAWalk();
 //        me.pet.takeForAWalk();
 //        me.pet.takeForAWalk();
 //        me.pet.takeForAWalk();
@@ -40,6 +40,7 @@ public class Main {
     //    }while (me.pet.imDead());
 
         me.car = new Car("Volkswagen","Passat",1984,1.9,"Red");
+        System.out.println("test");
 
     }
 }
