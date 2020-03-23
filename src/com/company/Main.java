@@ -25,7 +25,6 @@ public class Main {
 
         me.setSalary(2000.0);
         Car passat = new Car("Volkswagen", "Passat", 1984, 1.9, "Red");
-        Car Ford = new Car("cos","jakos",1995,3.0,"red");
         me.setCar(passat);
         System.out.println("I'm driving " + me.getCar().model);
 
@@ -33,7 +32,7 @@ public class Main {
         myWife.firstName = "Karolina";
         myWife.lastName = "Warda";
         myWife.setSalary(32000.0);
-        myWife.setCar(Ford);
+        myWife.setCar(passat);
 
         System.out.println(me.getCar());
         System.out.println(myWife.getCar());
