@@ -1,5 +1,6 @@
 package com.company.cos;
 
+import com.company.animal.Human;
 import com.company.animal.Saleable;
 
 public class Car extends Device implements Saleable {
@@ -22,8 +23,16 @@ public class Car extends Device implements Saleable {
 
     }
 
+
+
     @Override
-    public void sell() throws Exception {
-        System.out.println("Car sold");
+    public void sell(Human buyer, Human seller, double price) throws Exception {
+        if (buyer.cash >= price){
+            buyer.cash = buyer.cash - price;
+            seller.cash = seller.cash + price;
+            System.out.println(seller.firstName+ " " + " sprzedał" + buyer.firstName +" "+ this.model + " za kwote "+ price);
+        }else {
+            System.out.println("Nie masz wystarczająco gotówki.");
+        }
     }
 }

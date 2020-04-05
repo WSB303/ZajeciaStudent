@@ -10,6 +10,7 @@ public class Human extends Animal implements Saleable{
     public Animal pet;
     public Car car;
     public Double salary;
+    public Double cash = 2000.0;
     public final static Double DEFAULT_HUMAN_WEIGHT = 70.0;
 
     public Human(String homosapiens) {
@@ -45,12 +46,11 @@ public class Human extends Animal implements Saleable{
     public String toString(){
         return firstName + "" + lastName;
     }
+
+
+
     @Override
-    public void sell() throws Exception {
-        if(this instanceof Human){
-            throw new Exception("U can not sell human");
-        } else {
-            System.out.println("elowa");
-        }
+    public void sell(Human buyer, Human seller, double price) throws Exception {
+        System.out.printf("Nie można kupić ani sprzedać człowieka.");
     }
 }

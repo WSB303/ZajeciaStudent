@@ -36,12 +36,18 @@ public class Main {
         myWife.setSalary(32000.0);
         myWife.setCar(passat);
 
+
         System.out.println(me.getCar());
         System.out.println(myWife.getCar());
 
 
 
-        me.pet.sell();
-        me.car.sell();
+        dog.sell(myWife,me,30.0);
+        passat.sell(myWife,me,200);
+        me.sell(myWife,me,200);
+        System.out.println("\nMoja żona na koncie posiada: "+ myWife.cash);
+        System.out.println("Ja posiadam na koncie "+ me.cash);
+
+
     }
 }

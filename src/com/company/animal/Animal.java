@@ -73,9 +73,16 @@ public class Animal implements Edible, Saleable {
         }
     }
 
+
     @Override
-    public void sell() throws Exception {
-        System.out.println("Animal sold");
+    public void sell(Human buyer, Human seller, double price) throws Exception {
+        if (buyer.cash >= price){
+            buyer.cash = buyer.cash - price;
+            seller.cash = seller.cash + price;
+            System.out.println(seller.firstName+ " " + " sprzedał " + buyer.firstName +" "+ this.name + " za kwote "+ price);
+        }else {
+            System.out.println("Nie masz wystarczająco gotówki.");
+        }
     }
 }
 
