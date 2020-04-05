@@ -3,7 +3,7 @@ package com.company.animal;
 import com.company.cos.Car;
 import com.company.cos.Phone;
 
-public class Human extends Animal {
+public class Human extends Animal implements Saleable{
    public  String firstName;
     public String lastName;
     public Phone phone;
@@ -44,5 +44,13 @@ public class Human extends Animal {
     }
     public String toString(){
         return firstName + "" + lastName;
+    }
+    @Override
+    public void sell() throws Exception {
+        if(this instanceof Human){
+            throw new Exception("U can not sell human");
+        } else {
+            System.out.println("elowa");
+        }
     }
 }

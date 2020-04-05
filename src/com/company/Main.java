@@ -6,7 +6,7 @@ import com.company.cos.Car;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         Human me = new Human("homosapiens");
         me.firstName = "Jacek";
@@ -39,21 +39,9 @@ public class Main {
         System.out.println(me.getCar());
         System.out.println(myWife.getCar());
 
-        System.out.println("\nSprawdzanie klasy");
-
-        System.out.println(me instanceof Human);
-        System.out.println(me instanceof Animal);
-
-        System.out.println(me.pet instanceof Human);
-        System.out.println(me.pet instanceof Animal);
-
-        System.out.println(me instanceof Object);
-        System.out.println(me.pet instanceof Object);
-        System.out.println(passat instanceof Object);
-
-        System.out.println(passat);
 
 
-
+        me.pet.sell();
+        me.car.sell();
     }
 }

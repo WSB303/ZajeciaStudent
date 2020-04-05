@@ -2,7 +2,7 @@ package com.company.animal;
 
 import java.io.File;
 
-public class Animal  {
+public class Animal implements Edible, Saleable {
     final public String species;
     protected Double weight;
     public String name;
@@ -61,5 +61,21 @@ public class Animal  {
         return species + "" + name;
     }
 
+    @Override
+    public void beEaten() throws Exception {
+        System.out.println("Adiooooooos");
+        this.weight= 0.0;
+        if(this instanceof Human){
+            throw new Exception("No way you cannibal!");
+        } else {
+            System.out.println("Adiooos");
+            this.weight = 0.0;
+        }
+    }
+
+    @Override
+    public void sell() throws Exception {
+        System.out.println("Animal sold");
+    }
 }
 
