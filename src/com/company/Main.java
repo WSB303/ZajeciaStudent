@@ -1,12 +1,14 @@
 package com.company;
 
+import com.company.animal.Animal;
+import com.company.animal.Human;
 import com.company.cos.Car;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Human me = new Human();
+        Human me = new Human("homosapiens");
         me.firstName = "Jacek";
         me.lastName = "Placek";
         me.pet = new Animal("mouse");
@@ -28,7 +30,7 @@ public class Main {
         me.setCar(passat);
         System.out.println("I'm driving " + me.getCar().model);
 
-        Human myWife = new Human();
+        Human myWife = new Human("homosapiens");
         myWife.firstName = "Karolina";
         myWife.lastName = "Warda";
         myWife.setSalary(32000.0);
@@ -36,5 +38,22 @@ public class Main {
 
         System.out.println(me.getCar());
         System.out.println(myWife.getCar());
+
+        System.out.println("\nSprawdzanie klasy");
+
+        System.out.println(me instanceof Human);
+        System.out.println(me instanceof Animal);
+
+        System.out.println(me.pet instanceof Human);
+        System.out.println(me.pet instanceof Animal);
+
+        System.out.println(me instanceof Object);
+        System.out.println(me.pet instanceof Object);
+        System.out.println(passat instanceof Object);
+
+        System.out.println(passat);
+
+
+
     }
 }

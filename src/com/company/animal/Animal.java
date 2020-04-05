@@ -1,12 +1,12 @@
-package com.company;
+package com.company.animal;
 
 import java.io.File;
 
-public class Animal {
-    final String species;
-    private Double weight;
+public class Animal  {
+    final public String species;
+    protected Double weight;
     public String name;
-    File pic;
+    public File pic;
 
     public static final Double DEAFAULT_DOG_WEIGHT = 10.0;
     public static final Double DEAFAULT_MOUSE_WEIGHT = 0.01;
@@ -27,7 +27,7 @@ public class Animal {
 
     }
 
-    void feed() {
+    public void feed() {
         if(weight>0.0) {
             weight++;
             System.out.println("thx for food bro, " + weight + "kg");
